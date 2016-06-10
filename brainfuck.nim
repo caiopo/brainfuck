@@ -37,6 +37,4 @@ proc run(skip = false): bool =
 
         inc codePos
 
-var x = run()
-
-echo x
+discard run()

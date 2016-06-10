@@ -1,11 +1,5 @@
 from sys import stdin, argv
 
-def inc(n):
-	return (n+1) % 256
-
-def dec(n):
-	return 255 if n-1 < 0 else n-1
-
 tape = []
 code_pos = 0
 tape_pos = 0
@@ -26,10 +20,11 @@ def run(skip=False):
 			return tape[tape_pos] != 0
 		elif not skip:
 			if code[code_pos] == '+':
-				tape[tape_pos] = inc(tape[tape_pos])
+				tape[tape_pos] = (tape[tape_pos]+1) % 256
 
 			elif code[code_pos] == '-':
-				tape[tape_pos] = dec(tape[tape_pos])
+				tape[tape_pos] = (255 if tape[tape_pos]-1 < 0
+									  else tape[tape_pos]-1)
 
 			elif code[code_pos] == '>':
 				tape_pos += 1
