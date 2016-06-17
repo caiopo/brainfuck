@@ -10,5 +10,8 @@ go:
 java:
 	javac brainfuck.java
 
+rust:
+	rustc brainfuck.rs
+
 clean:
 	rm brainfuck{,.class}

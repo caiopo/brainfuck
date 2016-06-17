@@ -3,7 +3,6 @@ import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
-import java.util.Scanner;;
 
 public class brainfuck {
 
@@ -13,13 +12,7 @@ public class brainfuck {
 
 	static String code;
 
-	static Scanner scanner;
-
 	public static void main(String[] args) {
-		scanner = new Scanner(System.in);
-
-		System.out.println(args[0]);
-
 		if (args.length > 0) {
 
 			byte[] bytes = null;
@@ -36,7 +29,6 @@ public class brainfuck {
 		}
 
 		run(false);
-
 	}
 
 	public static boolean run(boolean skip) {
