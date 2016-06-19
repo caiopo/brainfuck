@@ -1,6 +1,12 @@
 nim:
 	nim c -d:release brainfuck.nim
 
+nimcompiler:
+	nim c -d:release brainfuck_compiler.nim
+
+c:
+	gcc brainfuck.c -o brainfuck -Wall -pedantic -Wextra -O3
+
 cpp:
 	g++ brainfuck.cpp -o brainfuck -std=c++11 -Wall -pedantic -Wextra -O3
 
@@ -14,4 +20,4 @@ rust:
 	rustc brainfuck.rs
 
 clean:
-	rm brainfuck{,.class}
+	rm brainfuck{,.class,_compiler}

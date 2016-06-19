@@ -26,29 +26,29 @@ bool run(bool skip = false) {
 			return tape[tapePos] != '\0';
 		} else if (!skip) {
 			switch (code[codePos]) {
-            case '+':
+			case '+':
 				++tape[tapePos];
-            	break;
+				break;
 
-            case '-':
-            	--tape[tapePos];
-            	break;
+			case '-':
+				--tape[tapePos];
+				break;
 
-            case '>':
-            	++tapePos;
-            	break;
+			case '>':
+				++tapePos;
+				break;
 
-            case '<':
-            	--tapePos;
-            	break;
+			case '<':
+				--tapePos;
+				break;
 
-            case '.':
-            	std::cout << tape[tapePos];
-            	break;
+			case '.':
+				std::cout << tape[tapePos];
+				break;
 
-            case ',':
-            	std::cin >> tape[tapePos];
-            	break;
+			case ',':
+				std::cin >> tape[tapePos];
+				break;
 			}
 		}
 
